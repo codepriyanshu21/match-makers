@@ -31,6 +31,15 @@ Internal matchmaker dashboard built with TanStack Start, Vite, React, TypeScript
 - AI requests run on the server through the app’s AI gateway helper
 - The UI always lets the user review the generated text before confirming any action
 
+## Authentication
+
+- The app uses Supabase email and password authentication
+- Open the `/auth` page to either sign in or create a new account
+- On the login tab, enter your email and password, then submit to access the dashboard
+- On the signup tab, enter the same details to create an account; the app signs the user in after registration
+- After login, the session is stored by Supabase and attached to server function requests automatically
+- If a user already has a session, the auth page redirects them to `/dashboard`
+
 ## Assumptions Made
 
 - Customer profile data is complete enough for ranking without additional user input
