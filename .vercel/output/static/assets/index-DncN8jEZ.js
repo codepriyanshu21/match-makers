@@ -1,0 +1,1 @@
+import{u as s,r as a,s as n}from"./index-DYUrcdqG.js";function r(){const e=s();return a.useEffect(()=>{n.auth.getSession().then(({data:t})=>{e({to:t.session?"/dashboard":"/auth",replace:!0})})},[e]),null}export{r as component};

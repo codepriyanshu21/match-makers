@@ -1,13 +1,13 @@
 # TDC Matchmakers
 
-Internal matchmaker dashboard built with TanStack Start, Vite, React, TypeScript, Supabase, and Cloudflare Workers.
+Internal matchmaker dashboard built with TanStack Start, Vite, React, TypeScript, Supabase, and Vercel.
 
 ## Features
 
 - Client profile dashboard with biodata, notes, and match history
 - AI-assisted match ranking and intro drafts
 - Supabase auth and data access
-- Cloudflare-ready production build
+- Vercel-ready production build
 
 ## Tech Choices
 
@@ -15,7 +15,7 @@ Internal matchmaker dashboard built with TanStack Start, Vite, React, TypeScript
 - React and TypeScript for a type-safe UI and component logic
 - Supabase for authentication and customer data storage
 - Vite for fast local development and production builds
-- Cloudflare Workers for deployment
+- Vercel for deployment
 
 ## Matching Logic
 
@@ -45,7 +45,7 @@ Internal matchmaker dashboard built with TanStack Start, Vite, React, TypeScript
 - Customer profile data is complete enough for ranking without additional user input
 - Matching scores are advisory and do not replace human review
 - Supabase credentials and Google Gemini credentials are available in the deployment environment
-- Cloudflare serves the built app using the generated worker and static asset output
+- Vercel serves the built app using the generated Nitro output
 
 ## Prerequisites
 
@@ -86,19 +86,17 @@ Create a production build:
 npm run build
 ```
 
-The build generates client assets in `.output/public` and the server bundle in `.output/server` for Cloudflare-compatible deployment.
+The build generates client assets and server output for Vercel deployment.
 
-## Deploy to Cloudflare
+## Deploy to Vercel
 
-This repo includes `wrangler.jsonc` for Cloudflare deployment.
+Nitro is configured for Vercel output.
 
-1. Add your production environment variables in Cloudflare.
+1. Add your production environment variables in Vercel.
 2. Make sure the project root is the folder containing this `README.md` and `package.json`.
-3. Deploy with Wrangler:
-
-```bash
-npx wrangler deploy
-```
+3. Set the build command to `npm run build`.
+4. Use `.vercel/output` as the output directory if you set it manually.
+5. Deploy from your connected GitHub repository.
 
 ## Scripts
 
@@ -112,4 +110,4 @@ npx wrangler deploy
 
 - `src/routes/__root.tsx` defines the app shell and top-level routing layout.
 - `src/routes/README.md` documents TanStack Start file-based routing conventions.
-- `wrangler.jsonc` configures Cloudflare deployment output and observability.
+- `wrangler.jsonc` is only relevant if you also deploy this project to Cloudflare.
