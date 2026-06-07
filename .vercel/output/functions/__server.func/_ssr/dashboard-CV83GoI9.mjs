@@ -1,6 +1,6 @@
 import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { C as CUSTOMERS } from "./router-Ci47zg1v.mjs";
+import { C as CUSTOMERS } from "./router-MV7Ny37x.mjs";
 import { I as Input } from "./input-C0QjszdI.mjs";
 import { B as Badge } from "./badge-DyfXZgLs.mjs";
 import "../_libs/sonner.mjs";

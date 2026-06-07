@@ -1,4 +1,4 @@
-import { c as createMiddleware } from "./server-BwVezT5K.mjs";
+import { c as createMiddleware, a as createCsrfMiddleware } from "./server-CIqk24En.mjs";
 import { r as renderErrorPage } from "./index.mjs";
 import { s as supabase } from "./client-D_vfBtzt.mjs";
 import "../_libs/seroval.mjs";
@@ -75,9 +75,12 @@ const errorMiddleware = createMiddleware().server(async ({ next }) => {
     });
   }
 });
+const csrfMiddleware = createCsrfMiddleware({
+  filter: (ctx) => ctx.handlerType === "serverFn"
+});
 const startInstance = createStart(() => ({
   functionMiddleware: [attachSupabaseAuth],
-  requestMiddleware: [errorMiddleware]
+  requestMiddleware: [csrfMiddleware, errorMiddleware]
 }));
 export {
   startInstance

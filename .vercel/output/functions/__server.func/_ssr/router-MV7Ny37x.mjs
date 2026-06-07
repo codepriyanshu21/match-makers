@@ -26,7 +26,7 @@ import "../_libs/iceberg-js.mjs";
 import "../_libs/supabase__auth-js.mjs";
 import "tslib";
 import "../_libs/supabase__functions-js.mjs";
-const appCss = "/assets/styles-BVdbf_6b.css";
+const appCss = "/assets/styles-C5KvTdVX.css";
 function reportAppError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__appEvents?.captureException?.(
@@ -149,7 +149,7 @@ const Route$2 = createFileRoute("/")({
   ssr: false,
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./dashboard-BAXSUQxp.mjs");
+const $$splitComponentImporter$1 = () => import("./dashboard-CV83GoI9.mjs");
 const Route$1 = createFileRoute("/_authenticated/dashboard")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
@@ -249,7 +249,7 @@ function getProfile(id) {
   return DUMMY_PROFILES.find((p) => p.id === id) ?? getCustomer(id);
 }
 const $$splitNotFoundComponentImporter = () => import("./customers._id-DR4IOqcX.mjs");
-const $$splitComponentImporter = () => import("./customers._id-BLsfF4H9.mjs");
+const $$splitComponentImporter = () => import("./customers._id-7lxsJy1w.mjs");
 const Route = createFileRoute("/_authenticated/customers/$id")({
   loader: ({
     params

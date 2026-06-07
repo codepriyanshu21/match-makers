@@ -61,6 +61,7 @@ Create a `.env` file in the project root with the following values:
 ```dotenv
 SUPABASE_URL=your_supabase_url
 SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
 VITE_SUPABASE_PROJECT_ID=your_supabase_project_id

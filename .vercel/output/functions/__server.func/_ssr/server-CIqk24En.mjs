@@ -84,7 +84,7 @@ function getResponse() {
 }
 var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 async function getStartManifest(matchedRoutes) {
-  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-Iyv4A2dL.mjs");
+  const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-Cbpt0qEc.mjs");
   const startManifest = tsrStartManifest();
   let routes = startManifest.routes;
   routes[rootRouteId];
@@ -106,23 +106,23 @@ async function getStartManifest(matchedRoutes) {
 const manifest = {
   "042203c3a15e5594a66eda91ef000dc008647afbf36cd6cf65160ffbe890e02f": {
     functionName: "recordSentMatch_createServerFn_handler",
-    importer: () => import("./customer-data.functions-C6hF9M30.mjs")
+    importer: () => import("./customer-data.functions-c9sCMUlM.mjs")
   },
   "4b1cadaa8cc04f370a7e54b3ad1022e3d979770e9e6d066bcc105434788723c5": {
     functionName: "aiExplainMatch_createServerFn_handler",
-    importer: () => import("./ai.functions-BEjS_qL5.mjs")
+    importer: () => import("./ai.functions-CSecRimL.mjs")
   },
   "62f78415c6c889d2d38161536f9a2ca754a196ed26e6d0e6487e94bc9f421dec": {
     functionName: "getCustomerData_createServerFn_handler",
-    importer: () => import("./customer-data.functions-C6hF9M30.mjs")
+    importer: () => import("./customer-data.functions-c9sCMUlM.mjs")
   },
   "967941a0ae5a016ebb717ca4c106e39ce8d360ceac72b0e12406259c43aeb63f": {
     functionName: "addNote_createServerFn_handler",
-    importer: () => import("./customer-data.functions-C6hF9M30.mjs")
+    importer: () => import("./customer-data.functions-c9sCMUlM.mjs")
   },
   "ff39f42449602efc379b7711cd5e6a3293ea07f34381aa0edb6e724db73b3752": {
     functionName: "aiGenerateIntro_createServerFn_handler",
-    importer: () => import("./ai.functions-BEjS_qL5.mjs")
+    importer: () => import("./ai.functions-CSecRimL.mjs")
   }
 };
 async function getServerFnById(id, access) {
@@ -1352,8 +1352,8 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
   const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-    import("./router-Ci47zg1v.mjs").then((n) => n.r),
-    import("./start-BZbjIVsh.mjs"),
+    import("./router-MV7Ny37x.mjs").then((n) => n.r),
+    import("./start-6g7gjTl4.mjs"),
     import("./empty-plugin-adapters-BFgPZ6_d.mjs")
   ]);
   return {
@@ -1700,9 +1700,10 @@ const server = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
 }, Symbol.toStringTag, { value: "Module" }));
 export {
   TSS_SERVER_FUNCTION as T,
-  createServerFn as a,
-  getRequest as b,
+  createCsrfMiddleware as a,
+  createServerFn as b,
   createMiddleware as c,
+  getRequest as d,
   getServerFnById as g,
   server as s
 };
